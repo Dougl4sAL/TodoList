@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Icones do projeto -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="todo-container">
+        <header>
+            <h1>Todo Avançado</h1>
+        </header>
+        <form id="todo-form">
+            <p>Adicione sua tarefa:</p>
+            <div class="form-controles">
+                <input type="text" id="todo-input" placeholder="O que você vai fazer?">
+                <button tipy="submit">
+                    <!-- icone de + dentro do button -->
+                    <i class="fa-thin fa-plus"></i>
+                </button>
+            </div>
+        </form>
+
+        <!-- Pra fazer alterações nas listas -->
+        <form id="edit-form" class="esconder">
+            <p>Edite sua tarefa:</p>
+            <div class="form-controles">
+                <input type="text" id="edit-input">
+                <button type="submit" >
+                    <!-- icone de duplo de confirmar -->
+                    <i class="fa-solid fa-check-double"></i>
+                </button>
+            </div>
+            <button id="cancelar-button">Cancelar</button>
+        </form>
+
+        <!-- Pesquisar e Filtar a Lista -->
+        <div class="ferramentas-todo">
+            <div id="pesquisar-todo">
+                <h4>Pesquisar:</h4>
+                <form>
+                    <input type="text" id="pesquisar-input" placeholder="Buscar...">
+                    <button id="limpar-button">
+                        <!-- icone de deletar -->
+                        <i class="fa-solid fa-delete-left"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div id="filtrar-todo">
+                <h4>Filtar:</h4>
+                <select id="select-filtro">
+                    <option value="all">Todos</option>
+                    <option value="done">Feitos</option>
+                    <option value="todo">A fazer</option>
+                </select>
+            </div>
+            <!-- Fim ferramentas do todo -->
+        </div>
+
+
+        <!-- Vdd lista, onde apareceram as tarefas -->
+        <div id="todo-list">
+            <div class="todo feito">
+                <h3>Encontre as tarefas usando a barra de pesquisa ou o filtro</h3>
+                <button class="feito-todo">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+                <button class="editar-todo">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+                <button class="remover-todo">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="todo">
+                <h3>Nesse TodoList vc pode concluir, editar e apagar as tarefas.</h3>
+                <button class="feito-todo">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+                <button class="editar-todo">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+                <button class="remover-todo">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- fim -->
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+/* Geral do CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    color: #333;
+    box-sizing: border-box;
+    /* Para os filhos nao ultrapassarem o tamanho do pai */
+}
+
+body {
+    background: #e8e8e8;
+}
+
+button {
+    background-color: #FDFDFD;
+    color: #102F5e;
+    border: 2px solid #102F5e;
+    padding: .3rem .6rem;
+    font-size: 16px;
+    cursor: pointer;
+    align-items: center;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: #102F5e;
+    color: #FDFDFD;
+}
+
+button:hover>i {
+    color: #FDFDFD;
+}
+
+button i {
+    color: #102F5e;
+    font-weight: bolder;
+    pointer-events: none;
+    /* Por ter o icone, quando clicar nao ia fazer nada, isso desativa o icone e agora o button funciona normalmente */
+}
+
+input,
+select {
+    padding: 7px 10px;
+}
+
+/* esconder a parte de edição */
+.esconder {
+    display: none;
+}
+
+.esconderFiltro {
+    display: none;
+}
+
+.todo-container {
+    max-width: 450px;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 60px auto;
+    background: #FDFDFD;
+    box-shadow: 15px 15px 30px #bebebe,
+        -15px -15px 30px #ffffff;
+}
+
+.todo-container header {
+    text-align: center;
+    padding: 0 10px 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#cancelar-button {
+    margin-top: 1rem;
+}
+
+#todo-form,
+#edit-form {
+    padding: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+#todo-form p,
+#edit-form p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+#todo-input,
+#edit-input {
+    width: 310px;
+}
+
+/* Ferramentas */
+
+h4 {
+    margin-bottom: 0.5rem;
+}
+
+.ferramentas-todo {
+    display: flex;
+    padding: 16px;
+}
+
+#pesquisar-todo {
+    border-right: 1px solid #ccc;
+    padding-right: 1rem;
+}
+
+#filtrar-todo {
+    padding-left: 1rem;
+}
+
+#filtrar-todo select {
+    width: 100px;
+}
+
+/* Lista de tarefas */
+.todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.todo h3 {
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.todo button {
+    margin-left: 0.3rem;
+}
+
+.feito {
+    background-color: #395169;
+}
+
+.feito h3 {
+    color: #ffffff;
+    text-decoration: line-through;
+    font-style: italic;
+}
